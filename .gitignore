@@ -50,3 +50,7 @@ sonar-project.properties
 
 # Heft (already have .heft but ensure dir form)
 .heft/
+lib-dts
+lib-commonjs
+lib-esm
+jest-output

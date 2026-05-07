@@ -4,7 +4,7 @@
     "name": "pol-styler-client-side-solution",
     "id": "6eb9fe3b-1257-4e48-b53c-be5075cdc80b",
     "title": "POL CSS Styler",
-    "version": "1.2.0.0",
+    "version": "2.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
