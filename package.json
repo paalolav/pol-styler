@@ -14,7 +14,7 @@
   "dependencies": {
     "@microsoft/decorators": "^1.17.5",
     "@microsoft/sp-application-base": "^1.20.0",
-    "@microsoft/sp-core-library": "^1.20.0",
+    "@microsoft/sp-core-library": "^1.22.2",
     "@microsoft/sp-dialog": "^1.20.0",
     "@microsoft/sp-module-interfaces": "1.20.2",
     "tslib": "^2.5.0"
