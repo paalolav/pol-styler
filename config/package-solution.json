@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pol-styler-client-side-solution",
+    "id": "6eb9fe3b-1257-4e48-b53c-be5075cdc80b",
+    "title": "POL CSS Styler",
+    "version": "1.2.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "Computas",
+      "websiteUrl": "https://www.computas.com",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "520383"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Loads custom CSS files to style the SharePoint site"
+      },
+      "longDescription": {
+        "default": "Loads custom CSS files to style the SharePoint site"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "Application Extension - Deployment of custom action",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "a997fd9e-d56a-46e3-b36e-68e3ea2b80d4",
+        "version": "1.2.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pol-styler.sppkg"
+  }
+}

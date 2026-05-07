@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-extension-manifest.schema.json",
+
+  "id": "125d04f8-45a4-4ad9-88f5-f77bd3970903",
+  "alias": "PolStylerApplicationCustomizer",
+  "componentType": "Extension",
+  "extensionType": "ApplicationCustomizer",
+
+  "version": "1.2.0.0",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false
+}

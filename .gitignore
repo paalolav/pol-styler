@@ -1,0 +1,52 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+
+# Build generated files
+dist
+lib
+release
+solution
+temp
+*.sppkg
+.heft
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# OSX
+.DS_Store
+
+# Visual Studio files
+.ntvs_analysis.dat
+.vs
+bin
+obj
+
+# Resx Generated Code
+*.resx.ts
+
+# Styles Generated Code
+*.scss.ts
+
+# Secrets / credentials
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+appsettings*.json
+
+# SonarQube
+sonar-project.properties
+.scannerwork/
+
+# Rush
+.rush/
+
+# Heft (already have .heft but ensure dir form)
+.heft/
