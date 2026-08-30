@@ -7,11 +7,13 @@ import {
 import { SPComponentLoader } from '@microsoft/sp-loader';
 
 import * as strings from 'PolStylerApplicationCustomizerStrings';
+import { resolveCssUrl } from './cssSource';
 
 const LOG_SOURCE: string = 'PolStylerApplicationCustomizer';
 
 export interface IPolStylerApplicationCustomizerProperties {  
   cssFilePath: string;
+  allowedCssHosts?: string;
 }
 
 export default class PolStylerApplicationCustomizer
@@ -23,14 +25,16 @@ export default class PolStylerApplicationCustomizer
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
     
     if (this.properties.cssFilePath) {
-      let cssFileToLoad = this.properties.cssFilePath.trim();
-      if (!cssFileToLoad.startsWith('https://')) {
-        const baseUrl = `${document.location.protocol}//${document.location.hostname}`;
-        cssFileToLoad = cssFileToLoad.startsWith('/')
-          ? `${baseUrl}${cssFileToLoad}`
-          : `${baseUrl}/${cssFileToLoad}`;
+      try {
+        const cssFileToLoad = resolveCssUrl(
+          this.properties.cssFilePath,
+          document.location.origin,
+          this.properties.allowedCssHosts
+        );
+        SPComponentLoader.loadCss(cssFileToLoad);
+      } catch (error) {
+        Log.error(LOG_SOURCE, error as Error);
       }
-      SPComponentLoader.loadCss(cssFileToLoad);
     }
 
     this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceholders);

@@ -5,14 +5,14 @@
     "pol-styler-application-customizer": {
       "components": [
         {
-          "entrypoint": "./lib/extensions/polStyler/PolStylerApplicationCustomizer.js",
-          "manifest": "./src/extensions/polStyler/PolStylerApplicationCustomizer.manifest.json"
+          "entrypoint": "./lib/extensions/PolStyler/PolStylerApplicationCustomizer.js",
+          "manifest": "./src/extensions/PolStyler/PolStylerApplicationCustomizer.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "PolStylerApplicationCustomizerStrings": "lib/extensions/polStyler/loc/{locale}.js"
+    "PolStylerApplicationCustomizerStrings": "lib/extensions/PolStyler/loc/{locale}.js"
   }
 }
