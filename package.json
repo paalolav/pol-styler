@@ -9,13 +9,16 @@
     "build": "heft test --clean --production && heft package-solution --production",
     "clean": "heft clean",
     "start": "heft start --clean",
-    "eject-webpack": "heft eject-webpack"
+    "eject-webpack": "heft eject-webpack",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "test": "heft test --clean"
   },
   "dependencies": {
     "@microsoft/decorators": "1.23.2",
     "@microsoft/sp-application-base": "1.23.2",
     "@microsoft/sp-core-library": "1.23.2",
     "@microsoft/sp-dialog": "1.23.2",
+    "@microsoft/sp-loader": "1.23.2",
     "tslib": "^2.5.0"
   },
   "devDependencies": {
