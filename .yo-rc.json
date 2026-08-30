@@ -2,12 +2,12 @@
   "@microsoft/generator-sharepoint": {
     "plusBeta": false,
     "isCreatingSolution": true,
-    "nodeVersion": "16.20.1",
+    "nodeVersion": "22.14.0",
     "sdksVersions": {
       "@microsoft/microsoft-graph-client": "3.0.2",
       "@microsoft/teams-js": "2.9.1"
     },
-    "version": "1.22.2",
+    "version": "1.23.2",
     "libraryName": "pol-styler",
     "libraryId": "6eb9fe3b-1257-4e48-b53c-be5075cdc80b",
     "environment": "spo",
