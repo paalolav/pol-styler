@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
 
 concurrency:
   group: security-${{ github.workflow }}-${{ github.ref }}
@@ -56,4 +57,3 @@ jobs:
 
       - name: Build production package
         run: npm run build
-
