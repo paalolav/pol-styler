@@ -8,7 +8,11 @@ Add the Pol.Styler app to your SharePoint sites to enjoy the style of the day fo
 
 ## Used SharePoint Framework Version
 
-![version](https://img.shields.io/badge/version-1.20.0-green.svg)
+![version](https://img.shields.io/badge/version-1.24.1-green.svg)
+
+SPFx 1.24.1 is Microsoft's November 2026 maintenance release. Use Node.js 26
+(`nvm use`); Node 22.14+ and Node 24 are also supported by this toolchain.
+See [Microsoft's compatibility reference](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/compatibility).
 
 ## Applies to
 
@@ -47,17 +51,17 @@ We recommend that site owners add the extention manually per site.
 - in the command-line run:
 
 ```bash
-npm install
+npm ci
 ```
 
 ```bash
-gulp bundle --ship
-gulp package-solution --ship
+npm test
+npm run build
 ```
 
 # Watching the code 
 ```bash
-gulp serve
+npm start
 ```
 
 ## Features
@@ -80,6 +84,22 @@ Here we've added border radius to the weather web part and changed colours and b
 ## Configuration
 
 The path to the CSS file can be configured per site, making it possible to load different CSS files for different sites. The file is loaded as a ClientSideComponentProperty of the PolStyler Custom Action.
+
+Use `/sites/cdn/Styling/PolStyler.css`, a tenant-root-relative path without the
+leading slash, or an absolute HTTPS URL on the current SharePoint origin.
+External hosts, alternate ports, HTTP, embedded credentials, protocol-relative
+URLs, backslashes, control characters, and non-string values are rejected.
+Rejected configuration loads no stylesheet and logs a generic warning without
+including the configured URL. Existing external-CDN configurations must move
+their stylesheets to the tenant before adopting this version.
+
+Only trusted administrators should edit the custom action or stylesheet library.
+This validates the initial URL, not CSS contents, redirects, nested `@import`
+rules, or image/font requests. A trusted stylesheet can still alter the entire
+page and request external resources. Avoid redirects and review stylesheet
+changes and library permissions before deployment.
+
+Security checks and remaining validation are tracked in [tasklist.md](tasklist.md).
 
 See example configuration:
 
